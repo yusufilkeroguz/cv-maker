@@ -1,9 +1,15 @@
 <script>
   const experiences = [
     {
+      companyName: `PropertyFinder`,
+      title: `Frontend Developer`,
+      date: `Apr 2021 - Current`,
+      desc: `PropertyFinder is biggest property finder platform for Saudi Arabia. In PropertyFinder i am working on in office projects(Admin Page, SAAS Panel). In office projects are written with React & SPA (Single Page App.). Also using TS (TypeScript), Webpack, BEM Css.`,
+    },
+    {
       companyName: `Modanisa`,
       title: `Frontend Developer`,
-      date: `Nov 2019 - Current`,
+      date: `Nov 2019 - Apr 2021`,
       desc: `Modanisa has big structure and Modanisa converted monolith structure to micro structure. I wrote Layout Service (All products connected to layout ). I am currently using React, Gulp, Webpack, SASS, MaintableCSS.`,
     },
     {
@@ -12,7 +18,6 @@
       date: `Apr 2018 - Nov 2019`,
       desc: `Enuygun called me when i resigned at Kolay Randevu. I started as Frontend Developer at Enuygun again. I was Hotel and Blog teams at Enuygun. I wrote React, Webpack, Autoprefixer, SASS etc.`,
     },
-
     {
       companyName: `Kolay Randevu`,
       title: `Frontend Developer`,
@@ -86,7 +91,7 @@
     align-items: center;
     width: 100%;
     flex-wrap: wrap;
-    padding-top: 0.5rem;
+    padding-top: 1.55rem;
     font-size: 1.25rem;
 
     &__company-name {

@@ -10,6 +10,7 @@
     "Redux",
     "Docker",
     "Node JS",
+    "MobX",
   ];
 
   const slugify = (name) => name.replace().toLowerCase().replace(/\s+/g, "-");
