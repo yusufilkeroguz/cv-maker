@@ -1,40 +1,52 @@
 <script>
   const experiences = [
     {
+      companyName: `RUUF`,
+      title: `Frontend Developer`,
+      date: `02.2022 - 04.2023`,
+      desc: `Burada iki proje bulunuyordu. Admin ve Landing. Tüm projelerin önyüzünde NextJS, Typescript, Docker teknolojilerini kullandım. Admin Projesinde Tailwind, Landing projesinde Material-UI kullandım.`,
+    },
+    {
       companyName: `PropertyFinder`,
       title: `Frontend Developer`,
-      date: `Apr 2021 - Current`,
-      desc: `PropertyFinder is biggest property finder platform for Saudi Arabia. In PropertyFinder i am working on in office projects(Admin Page, SAAS Panel). In office projects are written with React & SPA (Single Page App.). Also using TS (TypeScript), Webpack, BEM Css.`,
+      date: `07.2021 - 02.2022`,
+      desc: `Admin takımında idim. Tüm admin(ev silme, ev ekleme, mütaahit ekleme gibi) adımlarının önyüzünü yapıyordum. Admin projemiz CRA, Webpack, SASS, Typescript teknolojilerini kullandım. CSS Methodolojisi olarak BEM kullandım.`,
     },
     {
       companyName: `Modanisa`,
       title: `Frontend Developer`,
-      date: `Nov 2019 - Apr 2021`,
-      desc: `Modanisa has big structure and Modanisa converted monolith structure to micro structure. I wrote Layout Service (All products connected to layout ). I am currently using React, Gulp, Webpack, SASS, MaintableCSS.`,
+      date: `11.2019 - 05.2021`,
+      desc: `Ödeme ve sonrası takımında idim. Ödemeler, sipariş alındı bilgisi ve siparişin REST API ile backende gönderilmesi ile ilgilendim. İlk 6 ay boyunca React, Gulp, SASS teknolojilerini kullandım. CSS Methodolojisi olarak BEM kullandım. 6 ay sonunda CTO'muz değişti ve tüm projenin baştan Micro ile yazmamızı ve herkesin FullStack olmasını söyledi. Bu yüzden Micro-Frontend için Qiankun kütüphanesini kullandım. Herkesin anlaması için VueJS'in daha doğru olucağına kanaat getirdik ve Nuxt ile yazdık.`,
     },
     {
       companyName: `Enuygun`,
       title: `Frontend Developer`,
-      date: `Apr 2018 - Nov 2019`,
-      desc: `Enuygun called me when i resigned at Kolay Randevu. I started as Frontend Developer at Enuygun again. I was Hotel and Blog teams at Enuygun. I wrote React, Webpack, Autoprefixer, SASS etc.`,
+      date: `05.2018 - 11.2019`,
+      desc: `Enuygun'a döndüğümde Otel takımındaydım. Burada Otel projesinin önyüzünü baştan yazdım. Projede React, Webpack, SASS, Redux teknolojilerini kullandım. Otel projesini tamamladıktan sonra Test Otomasyonu yazdım. Daha sonrasında <ul><li><b>Otel:</b> Otellerin listelenmesi ve rezervasyonun oluşturulması.</li><li><b>Test Otomasyonu:</b> Yazılan kodların E2E test edilmesi.</li></ul>`,
     },
     {
       companyName: `Kolay Randevu`,
       title: `Frontend Developer`,
-      date: `Jun 2017 - Apr 2018`,
-      desc: `Kolay Randevu is a startup about appointment hairdresser. I was alone as Frontend Developer at Kolay Randevu. I created structure with Webpack, Grunt, jQuery, Babel, SASS etc.`,
+      date: `01.2017 - 05.2018`,
+      desc: `Kolay Randevu'da sayfaların tasarımlarının revize edilmesi ile ilgilendim. Bootstrap, Grunt, SASS, Browserify teknolojilerini kullandım.`,
     },
     {
       companyName: `Enuygun`,
-      title: `Frontend Developer`,
-      date: `Jun 2012 - Jan 2017`,
-      desc: `I was intern at 2012, After intern i started at Enuygun as Full Stack Developer. In 2013, I wanted to change my role as Frontend Developer and Enuygun changed my role to Frontend Developer. I wrote jquery, gulp, SASS, grunt from 2012 to 2015, In 2015 i learned React. Since 2015 i write React.`,
+      title: `Junior Frontend Developer`,
+      date: `07.2013 - 12.2016`,
+      desc: `Frontend alanında bir eksik olduğunu görüp frontend alanına yönelmeye karar verdim. Sayfaların tasarımlarının revize edilmesi ile ilgilendim. Burada Flight Crawler ve Product Crawler adındaki iki NodeJS crawler projesini tasarladım. 2015 yılına kadar jQuery, Bootstrap, SASS, Less, Browserify teknolojilerini kullandım. 2015 yılında React ile tanıştım. Yaptığım projelerin admin panellerinde bootstrap, webpack, sass teknolojileri kullandım. 2015'den sonra React'a geçirdim. <ul><li><b>Flight Crawler:</b> Verilen sitelerdeki uçuş listesini ve detaylarını mevcut uçak biletleri ile karşılatırmayı sağlıyor.</li><li><b>Product Crawler:</b> Akakce mantığı gibi eticaret yada ürün sahibi sitelerden fiyatları çekip fiyat karşılatırmayı sağlıyor.</li></ul>`,
+    },
+    {
+      companyName: `Enuygun`,
+      title: `Stajyer`,
+      date: `07.2012 - 06.2013`,
+      desc: `Fullstack developer olarak çalıştım. Php, HTML ve CSS kullandım. İlk enuygun için yaptığım proje başka sitelere entegre edilebilen bir widget sistemi idi. Tüm ayarlarını url parametresi olarak alıp rengini, inputlarını vs. göster-gizle-rengini değiştir yapabiliyordu.`,
     },
   ];
 </script>
 
 <div class="experiences">
-  <div class="experiences__title">Experiences</div>
+  <div class="experiences__title">Deneyimler</div>
 
   {#each experiences as experience}
     <div class="experience">
@@ -47,9 +59,11 @@
       <div class="experience__date">
         {experience.date}
       </div>
-      <div class="experience__desc">
-        {experience.desc}
-      </div>
+      <div
+        class="experience__desc"
+        contenteditable
+        bind:innerHTML={experience.desc}
+      />
     </div>
   {/each}
 </div>
@@ -113,6 +127,11 @@
     &__desc {
       flex: 0 0 100%;
       font-size: 1rem;
+
+      & ul {
+        padding-bottom: 0;
+        margin-bottom: 0;
+      }
     }
   }
 </style>

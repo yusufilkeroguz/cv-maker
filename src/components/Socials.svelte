@@ -13,19 +13,14 @@
     },
     {
       slug: "whatsapp",
-      label: "+90542 455 30 88",
+      label: "+905424553088",
       link: "https://wa.me/+905424553088?text=Hi!",
     },
     {
       slug: "mail",
       label: "yusufilkeroguz@gmail.com",
       link: "mailto:yusufilkeroguz@gmail.com",
-    },
-    {
-      slug: "skype",
-      label: "@yusufilkeroguz",
-      link: "skype:yusufilkeroguz?chat",
-    },
+    }
   ];
 </script>
 

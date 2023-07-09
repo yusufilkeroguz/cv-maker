@@ -1,7 +1,7 @@
 {
-  "name": "TODO",
-  "description": "TODO",
-  "version": "0.0.1",
+  "name": "cv-maker",
+  "description": "CV MAKER FOR YUSUF ILKER OĞUZ",
+  "version": "0.0.2",
   "scripts": {
     "dev": "sapper dev",
     "build": "sapper build",

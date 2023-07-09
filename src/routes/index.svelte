@@ -4,6 +4,8 @@
   import Skills from "../components/Skills.svelte";
   import Experiences from "../components/Experiences.svelte";
   import References from "../components/References.svelte";
+  import Summary from "../components/Summary.svelte";
+  import Education from "../components/Education.svelte";
 </script>
 
 <div class="container">
@@ -13,10 +15,14 @@
   <div class="col">
     <Socials />
   </div>
+  <div class="col">
+    <Summary />
+  </div>
   <div class="col content">
     <Experiences />
   </div>
   <div class="col right_side">
+    <Education />
     <Skills />
     <References />
   </div>

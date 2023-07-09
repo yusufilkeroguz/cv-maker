@@ -1,11 +1,13 @@
 <div class="summary">
-  <div class="summary__title">
-    <img src="/icons/summary.svg" alt="Summary" width={24} height="auto" />
+  <div class="summary__title">Hakkımda</div>
 
-    Summary
+  <div class="summary__content">
+    Merhaba ben Yusuf İlker Oğuz, İstanbul/Fikirtepe'de yaşıyorum. En uzun
+    süreli deneyemim React kütüphanesinde. Svelte ve Vue Frameworklerinde küçük
+    projeler yaptım. Teknoloji ayırt etmeyen birisiyim. Chrome - LightHouse
+    kütüphanesini çok sık kullanıyorum. Webpack, Gulp, Grunt, Parcel - bundler 
+    kütüphanelerini kullandım. SASS, LESS gibi CSS preprocessorlerini kullandım.
   </div>
-
-  <div class="summary__content">I am Frontend Developer based on Istanbul.</div>
 </div>
 
 <style lang="scss">
@@ -26,7 +28,7 @@
       justify-content: flex-start;
       align-items: center;
       padding: 0.25rem;
-      font-size: 1.5rem;
+      font-size: 2rem;
       font-weight: bold;
       border-bottom: 2px solid #000;
       border-right: 0.5rem solid transparent;
